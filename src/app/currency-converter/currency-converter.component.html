@@ -1,0 +1,31 @@
+
+<h1> Currency Converter</h1>
+
+<div class="div">
+    <form [formGroup]="form">
+        <mat-form-field class="example-full-width" appearance="fill" >
+            <mat-label>Quantity</mat-label>
+            <input matInput formControlName="Quantity"  type="text" (keyup)="converter()" [(ngModel)]="Quantity">
+        </mat-form-field>
+        <!-- <button type="submit" mat-raised-button color="primary">Sign In</button> -->
+       From: 
+        <mat-form-field appearance="fill">
+            <mat-label>Selected Currency 1</mat-label>
+            <mat-select [(ngModel)]="SelectedCurrency1" formControlName="Currency1" (selectionChange)="converter()">
+                <mat-option *ngFor="let item of listCurrency" [value]="item" #aa1>
+                    {{item.country}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        To:
+        <mat-form-field appearance="fill">
+            <mat-label>Selected Currency 2</mat-label>
+            <mat-select [(ngModel)]="SelectedCurrency2" formControlName="Currency2" (selectionChange)="converter()">
+                <mat-option *ngFor="let item of listCurrency" [value]="item" #aaaa>
+                    {{item.country}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+
+<h2 *ngIf="showAnswer">{{Quantity| number : '1.0-2'}} {{SelectedCurrency1.country}} =  {{AmountAfterConversion | number : '1.0-2'}} {{SelectedCurrency2.country}} </h2>
+
