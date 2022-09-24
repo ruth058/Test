@@ -5,7 +5,7 @@
     <form [formGroup]="form">
         <mat-form-field class="example-full-width" appearance="fill" >
             <mat-label>Quantity</mat-label>
-            <input matInput formControlName="Quantity"  type="text" (keyup)="converter()" [(ngModel)]="Quantity">
+            <input matInput formControlName="Quantity"  type="text" (keyup)="converter()" [(ngModel)]="Quantity" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
         </mat-form-field>
         <!-- <button type="submit" mat-raised-button color="primary">Sign In</button> -->
        From: 

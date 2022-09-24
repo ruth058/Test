@@ -81,7 +81,7 @@ export class CurrencyConverterComponent implements OnInit {
 }
 
 export class Currency {
-
+ 
   constructor(public country: string, public value: number) {
 
   }
