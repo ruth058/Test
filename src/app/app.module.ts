@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,13 +16,22 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
+import { TaskBoardComponent } from './task-board/task-board.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { DialogPostComponent } from './dialog-post/dialog-post.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogUserDetilesComponent } from './dialog-user-detiles/dialog-user-detiles.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     CurrencyConverterComponent,
-    AboutComponent
+    AboutComponent,
+    TaskBoardComponent,
+    BlogsComponent,
+    DialogPostComponent,
+    DialogUserDetilesComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +44,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatSelectModule,
     MatFormFieldModule,
+    MatDialogModule
  
   ],
   providers: [ConverterService],

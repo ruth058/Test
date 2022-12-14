@@ -1,0 +1,10 @@
+<h1>comments</h1>
+<div *ngFor="let Comment of listComments">
+<b>name:</b> {{Comment.name}} <br>
+<b>email: </b>{{Comment.email}} <br>
+<b> body: </b> {{Comment.body}}
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="close()">close</button>
+</div>

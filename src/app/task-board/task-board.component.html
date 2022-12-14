@@ -1,0 +1,16 @@
+<h1>task-board</h1>
+<!-- style: "cursor: pointer" -->
+<div>
+    <!-- (Click)="GetTodos(user.id)" -->
+    <!-- href ="GetTodos(user.id)" -->
+    <Li class="user" *ngFor="let user of listUsers"> <a herf="#" (click)="GetTodos(user.id)"> {{user.name}}  </a> <button mat-button color="primary" (click)="GetDetails(user.id)">
+            Read More</button>
+    </Li>
+</div>
+<br>
+<br>
+<!-- <li *ngFor="let user of listUsers"><a href="#" (click)="GetTodos(user.id)"> {{user.name}}</a></li>
+<a *ngFor="let user of listUsers" herf="javascript:void(0)"> {{user.name}} </a> -->
+<div *ngIf="show">
+    <li *ngFor="let item of listTodos">{{item.title}} </li>
+</div>

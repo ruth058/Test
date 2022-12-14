@@ -1,0 +1,7 @@
+<h1>blogs </h1>
+<div *ngFor="let blog of listBlogs" (click)="Getcomments(blog.id)">
+    <b>userId:</b> {{blog.userId}}<br>
+    <b>id: </b> {{blog.id}}<br>
+    <b> title:</b>title: {{blog.title}}<br>
+    <b>"body":</b> "body": {{blog.body}}<br>
+</div>
